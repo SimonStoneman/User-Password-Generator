@@ -105,16 +105,19 @@ function getPasswordOptions() {
   let pwdLength = 0;
 
   //prompt for password length (between 10 - 64 chars)
-  pwdLength = prompt("Enter the required password length between between 10 - 64:");
+  pwdLength = prompt("Enter the required password length between between 10 and 64:");
 
   //check length of user password length requirement is within boundaries
   if (pwdLength == null){
     
-      prompt('Please enter a value');
+      alert('Please enter a valid value');
+      
+      generatePassword();
 
   } else if (pwdLength < 10 || pwdLength > 64) {
 
-      prompt('Please enter a number between 10 and 64');
+      alert('Please enter a number between 10 and 64');
+      generatePassword();
 
   } else {
       // confirm for wanting lowercase
